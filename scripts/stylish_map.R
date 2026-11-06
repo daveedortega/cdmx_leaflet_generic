@@ -174,11 +174,12 @@ leaflet() %>%
     group = "All observations",
     popup = ~paste0(
       "Line: ", linea,
+      "<br>Estacion:", nombre,
       "<br>Daily Average: ", pd_t
     ), 
     label = ~paste0(
-      "Line: ", linea,
-      " | Daily Average: ", scales::comma(pd)
+      "Line: ", linea, "| Estacion: ", nombre,
+      " - ", scales::comma(pd)
     ), 
     labelOptions = labelOptions(
       direction = "auto",
@@ -186,7 +187,7 @@ leaflet() %>%
       textsize = "14px",
       style = list(
         "font-family" = "Arial",
-        "font-weight" = "bold",
+        # "font-weight" = "bold",
         "padding" = "8px 12px"
       ))
   ) %>%
@@ -204,11 +205,12 @@ leaflet() %>%
     group = "Top 10",
     popup = ~paste0(
       "Line: ", linea,
+      "<br>Estacion: ", nombre,
       "<br>Daily Average: ", pd_t
     ), 
     label = ~paste0(
-      "Line: ", linea,
-      " | Daily Average: ", scales::comma(pd)
+      "Line: ", linea, "| Estacion: ", nombre,
+      " - ", scales::comma(pd)
     ), 
     labelOptions = labelOptions(
       direction = "auto",
